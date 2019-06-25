@@ -11,7 +11,7 @@ passport.use(User.createStrategy());
 passport.use(new GithubStrategy({
         clientID: process.env.GH_ID,
         clientSecret: process.env.GH_SECRET,
-        callbackURL: `http://localhost:4000${routes.githubCallback}`
+        callbackURL: `http://localhost:5001${routes.githubCallback}`
     },
     githubLoginCallback
 ));
@@ -28,7 +28,7 @@ passport.use(new FacebookStrategy({
 
 passport.use(new KakaoStrategy({
         clientID : process.env.KAKAO_ID,
-        callbackURL : `http://localhost:4000${routes.kakaoCallback}`
+        callbackURL : `http://localhost:5001${routes.kakaoCallback}`
     },
     kakaoLoginCallback
 ));
